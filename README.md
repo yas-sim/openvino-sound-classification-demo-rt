@@ -23,6 +23,7 @@ OpenVINO付属の`sound_classification_demo`を改造してリアルタイム版
 python -m pip install --upgrade pip setuptools
 python -m pip install -r requirements.in
 ```
+Note: Ubuntu may need to install `portaudio` library. `sudo apt install portaudio19-dev`  
 
 3. Download required DL models
 ```sh
