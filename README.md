@@ -42,7 +42,7 @@ python sound_classification_demo-rt.py ^
  --labels .\data\aclnet_53cl.txt ^
  --illustration_dir .\data\acl_img
 ```
-Note: Python 3.6 may cause an error on load_model().  
+Note: Python 3.6 may cause an error on load_network().  
 
 ### Note:  
 Tested on OpenVINO 2021.4 (Win10, Ubuntu 20.04)
