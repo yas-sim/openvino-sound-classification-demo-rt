@@ -10,6 +10,7 @@ OpenVINO付属の`sound_classification_demo`を改造してリアルタイム版
 
 - OpenVINO 2021.4
 - Python modules: `pyaudio`, `numpy`, `opencv-python`
+- (Ubuntu) portaudio : `portaudio19-dev`
 
 
 ### How to run:  
@@ -25,7 +26,7 @@ python -m pip install -r requirements.in
 ```
 Note: Ubuntu may need to install `portaudio` library. `sudo apt install portaudio19-dev`  
 
-3. Download required DL models
+3. Download required DL models  
 ```sh
 python %INTEL_OPENVINO_DIR%\deployment_tools\open_model_zoo\tools\downloader\downloader.py ^
  --list models.lst
@@ -33,7 +34,7 @@ python %INTEL_OPENVINO_DIR%\deployment_tools\open_model_zoo\tools\downloader\con
  --list models.lst --precisions FP16
 ```
 
-4. Run the demo
+4. Run the demo  
 
 ```sh
 python sound_classification_demo-rt.py ^
@@ -41,6 +42,7 @@ python sound_classification_demo-rt.py ^
  --labels .\data\aclnet_53cl.txt ^
  --illustration_dir .\data\acl_img
 ```
+Note: Python 3.6 may cause an error on load_model().  
 
 ### Note:  
-Tested on OpenVINO 2021.4 (Win10)
+Tested on OpenVINO 2021.4 (Win10, Ubuntu 20.04)
